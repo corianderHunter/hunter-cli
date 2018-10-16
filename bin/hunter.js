@@ -24,7 +24,7 @@ async function main() {
     let options = {
         name: {
             value: '',
-            initialValue: 'projectName'
+            initialValue: projectName
         },
         version: {
             value: '',
@@ -40,7 +40,7 @@ async function main() {
         },
     };
     for (let pro in options) {
-        process.stdout.write(` ?Project ${pro}${options[pro]?`(${options[pro]})`:''}:   `);
+        process.stdout.write(` ?Project ${pro}${options[pro].value?`(${options[pro]}).initialValue`:''}:   `);
         await new Promise((resolve, reject) => {
             process.stdin.on('data', (chunk) => {
                 options[pro].value ? null : options[pro].value = stdinFormat(chunk.toString()) || options[pro].initialValue; //avoid set value repeatedly

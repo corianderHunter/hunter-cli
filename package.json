@@ -1,6 +1,6 @@
 {
   "name": "hunter-cli",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "A node cli generates vue.js project.Project structure is born out of vue-cli's project,and then,add some common libraries",
   "bin": {
     "hunter": "bin/hunter.js"
